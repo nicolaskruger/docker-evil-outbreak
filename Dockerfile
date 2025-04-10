@@ -14,7 +14,7 @@ RUN apt-get install -y unzip
 RUN apt-get update && apt-get install -y php
 RUN apt-get install mariadb-server -y
 RUN apt-get install openjdk-21-jdk -y
-RUN apt-get install -y default
+RUN apt-get install default-jdk -y
 
 RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz
 RUN tar xzvf openssl-1.0.2q.tar.gz
