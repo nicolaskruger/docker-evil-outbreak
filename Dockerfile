@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -y dnsutils
 RUN apt-get install -y unzip
 RUN apt-get update && apt-get install -y php
 RUN apt-get install mariadb-server -y
-RUN apt-get install -y php7
-RUN apt-get install -y openjdk
+RUN apt-get install openjdk-21-jdk -y
 RUN apt-get install -y default
 
 RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz
