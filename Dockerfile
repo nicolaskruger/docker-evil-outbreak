@@ -31,4 +31,18 @@ RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz && \
     make && make install
 RUN /opt/openssl-1.0.2/bin/openssl ciphers -V 'ALL' | grep 0x13
 RUN sed -ie '1i\\n/opt/openssl-1.0.2/lib\n' /etc/ld.so.conf.d/x86_64-linux-gnu.conf
+RUN ldconfig
+RUN apt-get update
+RUN apt-get install libpcre3 -y libpcre3-dev -y
+RUN apt-get install libexpat1 -y libexpat1-dev -y libxml2 -y libxml2-dev -y libxslt1-dev -y libxslt1.1
+
+RUN wget https://dlcdn.apache.org/httpd/httpd-2.4.63.tar.gz && \
+    tar xzvf httpd-2.4.63.tar.gz &&\
+    cd httpd-2.4.63/srclib/ && \
+        wget https://dlcdn.apache.org/apr/apr-1.7.5.tar.gz && \
+        wget https://dlcdn.apache.org/apr/apr-util-1.6.3.tar.gz && \
+        tar xzvf apr-1.7.5.tar.gz && \
+        tar xzvf apr-util-1.6.3.tar.gz && \        
+        ln -s apr-1.7.5 apr && \
+        ln -s apr-util-1.6.3 apr-util
 CMD []
