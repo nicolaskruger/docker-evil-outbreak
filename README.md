@@ -2,6 +2,12 @@
 
 - 🚧 state(**WIP**) 
 
+## ☭ build
+
+```bash
+docker build -t evil .
+```
+
 ## goal
 
 - run ☣️ **resident evil outbreak** 🦠 server on docker
