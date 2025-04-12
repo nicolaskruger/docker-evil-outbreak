@@ -17,13 +17,18 @@ RUN apt-get install openjdk-21-jdk -y
 RUN apt-get install default-jdk -y
 
 RUN apt-get install wget -y
-RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz
-RUN tar xzvf openssl-1.0.2q.tar.gz
-RUN cd openssl-1.0.2q
-RUN ./config --prefix=/opt/openssl-1.0.2 --openssldir=/etc/ssl shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method enable-ssl2 -Wl,-rpath=/opt/openssl-1.0.2/lib
-RUN make depend 
-RUN make install
+RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz && \
+    tar -xvzf openssl-1.0.2q.tar.gz && \
+    cd openssl-1.0.2q && \
+    ./config --prefix=/opt/openssl-1.0.2 \
+             --openssldir=/etc/ssl \
+             shared \
+             enable-weak-ssl-ciphers \
+             enable-ssl3 \
+             enable-ssl3-method \
+             enable-ssl2 \
+             -Wl,-rpath=/opt/openssl-1.0.2/lib && \
+    make && make install
 RUN /opt/openssl-1.0.2/bin/openssl ciphers -V 'ALL' | grep 0x13
-RUN cd ..
 
 CMD []
