@@ -30,5 +30,5 @@ RUN wget https://www.openssl.org/source/openssl-1.0.2q.tar.gz && \
              -Wl,-rpath=/opt/openssl-1.0.2/lib && \
     make && make install
 RUN /opt/openssl-1.0.2/bin/openssl ciphers -V 'ALL' | grep 0x13
-
+RUN sed -ie '1i\\n/opt/openssl-1.0.2/lib\n' /etc/ld.so.conf.d/x86_64-linux-gnu.conf
 CMD []
