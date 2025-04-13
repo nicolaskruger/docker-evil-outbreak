@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package bioserver;
+package com.bioserver;
 
 import java.io.IOException;
 import java.net.InetAddress;

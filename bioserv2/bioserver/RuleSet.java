@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package bioserver;
+package com.bioserver;
 
 /**
  * Object for a rule
