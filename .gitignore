@@ -1,2 +1,46 @@
 _
 node_modules
+# Maven target directory
+/target/
+
+# Eclipse project files
+/.idea/
+/*.iml
+
+# IntelliJ project files
+/.idea/
+/*.iml
+
+# NetBeans project files
+/nbproject/
+
+# Gradle project files
+/.gradle/
+/build/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Maven wrapper files (optional, if you use Maven wrapper)
+.mvn/wrapper/
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# JAR files
+*.jar
+*.war
+*.ear
+
+# Maven repository
+/.m2/repository/
+
+# IDE and Editor settings
+.idea/
+*.swp
