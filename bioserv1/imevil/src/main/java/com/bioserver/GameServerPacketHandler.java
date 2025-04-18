@@ -45,7 +45,7 @@ class GameServerPacketHandler implements Runnable {
         GameServerDataEvent dataEvent;
         // get configuration
         Configuration conf = new Configuration();
-        
+
         this.db = new Database(conf.db_user, conf.db_password);
         packetidcounter = 0;
        

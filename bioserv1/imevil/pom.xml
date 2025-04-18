@@ -14,6 +14,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.30</version> <!-- Replace with the latest version -->
+    </dependency>
+
   </dependencies>
   <build>
       <plugins>
@@ -24,6 +30,7 @@
             <configuration>
                 <source>17</source> <!-- or 8, 11, depending on your JDK -->
                 <target>17</target>
+                
             </configuration>
         </plugin>
 
