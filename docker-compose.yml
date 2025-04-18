@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: xxxxxxxxxxxxxxxx
       MYSQL_DATABASE: bioserver
       MYSQL_USER: bioserver
-      MYSQL_PASSWORD: xxxxxxxxxxxxxxxx
+      MYSQL_PASSWORD: 'xxxxxxxxxxxxxxxx'
     ports:
       - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
