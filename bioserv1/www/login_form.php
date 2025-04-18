@@ -1,10 +1,9 @@
 <?php
 	session_start();
-	
-	require_once('db_cred.php');
-
+	$conn = require_once  'db_cred.php';
         function create_sessid() {
 		for(;;) {
+			global $conn;
 			$sessid = (mt_rand(10000000,99999999));
 			$res = mysqli_query($conn, 'select count(*) as cnt from sessions where sessid='.$sessid);
 			$row = mysqli_fetch_array($res, MYSQLI_ASSOC);
