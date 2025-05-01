@@ -1,4 +1,5 @@
 _
+trash
 node_modules
 # Maven target directory
 /target/
