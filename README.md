@@ -1,6 +1,6 @@
 # 🐳 docker evil outbreak ☣️
 
-- 🚧 state(**WIP**) 
+- 🚧 state(**WIP**)
 
 ## ☭ build
 
@@ -16,4 +16,3 @@ docker build -t evil .
 
 - [corbin-zip](https://github.com/corbin-zip)
 - [dev ghostline](https://gitlab.com/users/gh0stl1ne/projects)
-

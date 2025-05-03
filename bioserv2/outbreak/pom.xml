@@ -39,7 +39,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
-                <mainClass>resident.evil.App</mainClass>
+                <mainClass>resident.evil.ServerMain</mainClass>
             </configuration>
         </plugin>
       </plugins>
